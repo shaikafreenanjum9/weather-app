@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Weather App | Live Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="weather-container">
+
+        <header>
+            <h1>☀️ WeatherNow</h1>
+            <p>Discover the weather around you</p>
+        </header>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="city"
+                placeholder="Enter city name..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn" onclick="getWeather()">
+                Search
+            </button>
+        </div>
+
+        <p id="message" aria-live="polite">
+            Enter a city to discover its weather.
+        </p>
+
+        <section id="weatherInfo" class="weather-info" hidden>
+
+            <h2 id="cityName">City Name</h2>
+
+            <img id="weatherIcon" src="" alt="Weather icon">
+
+            <h1 id="temperature">--°C</h1>
+
+            <p id="description">Weather condition</p>
+
+            <div class="weather-details">
+
+                <div class="detail-card">
+                    <span>💧</span>
+                    <h3>Humidity</h3>
+                    <p id="humidity">--%</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>💨</span>
+                    <h3>Wind Speed</h3>
+                    <p id="wind">-- m/s</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌡️</span>
+                    <h3>Feels Like</h3>
+                    <p id="feelsLike">--°C</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>🌤️</span>
+                    <h3>Pressure</h3>
+                    <p id="pressure">-- hPa</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Powered by OpenWeatherMap 🌍</p>
+        </footer>
+
+    </div>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>
